@@ -1,0 +1,82 @@
+%so this is a LaTeX template which I created and I use this a lot, hope u guys like it
+\documentclass[10pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage[compact]{titlesec}
+\usepackage{amssymb} 
+\usepackage{setspace}
+\usepackage{amsmath,bm}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{graphics,graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{fdsymbol}
+\usepackage{geometry}
+\geometry{legalpaper, portrait, margin=1in}
+
+\pagestyle{fancy} 
+\fancyhf{}
+\rhead{dEePaNu}
+\lhead{Geometrical Delicacies}
+\rfoot{Page \thepage} 
+
+\title{\textbf{Geometrical Delicacies}}
+\author{dEePaNu}
+\date{17 November, 2022}
+
+%normal square box 
+\tcbuselibrary{breakable}
+\newtcolorbox{sectionbox}[1]{colback=blue!5!white, colframe=blue!75!black, fonttitle=\bfseries, title=#1}
+
+%claim box to showcase some claims which has green border only at leftside
+\newtcolorbox{claimbox}{
+	enhanced,
+	boxrule=0pt,frame hidden,
+	borderline west={4pt}{0pt}{green!75!black},
+	colback=green!10!white,sharp corners
+}
+
+%aah how can u forget QED
+\newcommand{\qedwhite}{\hfill \ensuremath{\Box}
+}
+\newtcolorbox{probox}{
+	enhanced,
+	boxrule=0pt,frame hidden,
+	borderline west={4pt}{0pt}{red!75!black},
+	colback=red!10!white,sharp corners
+}
+
+%the below thing basically is like a blue box around your text for highlighting problems etc and has title banner at the left
+\newtcbtheorem{Problem}{\large{Problem}}{
+  enhanced,
+  sharp corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  boxed title style={
+    sharp corners,
+    size=small,
+    colback=blue!75!red,
+    colframe=blue!75!black,
+  } 
+}{prb}
+
+\definecolor{carmine}{rgb}{0.68, 0.0, 0.09}
+
+%documents begins
+\doublespacing
+
+\begin{document} 
+\maketitle
+{\fontfamily{pbk}\selectfont
+	%do you stuff here
+
+
+\end{document}
